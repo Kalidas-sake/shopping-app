@@ -1,12 +1,14 @@
 <a *ngIf="recipe" href="#" class="list-group-item list-group-item-action flex-column align-items-start"
   (click)="onSelectItem()">
-  <div class="d-flex w-100 justify-content-between">
-    <h5 class="mb-1">{{recipe.name}}</h5>
-    <small>3 days ago</small>
+  <div class="row">
+    <div class="col-md-8">
+      <h4 class="mb-1">{{recipe.name}}</h4>
+      <p class="mb-1">{{recipe.description}}</p>
+    </div>
+    <div class="col-md-4">
+      <img class="img-responsive" [src]="recipe.imgUrl" alt="{{recipe.name}}" style="max-height: 80px;">
+    </div>
+  
   </div>
-  <div class="d-flex w-100 justify-content-between">
-    <p class="mb-1">{{recipe.description}}</p>
-    <img class="flex-left" [src]="recipe.imgUrl" alt="" style="max-height: 50px;">
-  </div>
-
+  
 </a>
