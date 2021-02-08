@@ -1,23 +1,21 @@
 <nav class="navbar navbar-default">
-  <a class="navbar-brand" href="#">Recipe Book</a>
+  <a class="navbar-brand">Recipe Book</a>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="nav navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="onSelect('recipe')">Recipes</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" (click)="onSelect('shopping-list')">Shopping List</a>
-      </li>
+      <li routerLinkActive="active"><a routerLink="/recipes" class="nav-link">Recipes</a> </li>
+      <li routerLinkActive="active"><a routerLink="/shopping-list" class="nav-link">Shopping List</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
       <li class="nav-item dropdown" appDropdown>
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+        <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown">
           Manage
           <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li> <a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
+          <li> <a style="cursor: pointer;">Action</a></li>
+          <li><a style="cursor: pointer;">Another action</a></li>
           <li class="divider"></li>
-          <li><a href="#">Something else here</a></li>
+          <li><a style="cursor: pointer;">Something else here</a></li>
         </ul>
       </li>
 
